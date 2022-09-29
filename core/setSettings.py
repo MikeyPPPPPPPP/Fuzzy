@@ -19,7 +19,9 @@ class setup:
             'wordlist':'',
             'statusCodes':'',
             'charectorShow':'',
-            'wordShow':''
+            'wordShow':'',
+            'followRedirects':'',
+            'tor':''
         }
         return json.dumps(self.defaulprams, indent=3)
 
