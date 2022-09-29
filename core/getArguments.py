@@ -9,6 +9,8 @@ def getArgs():
     ar.add_argument('-sc', help="status code to show   200,403", required=False)
     ar.add_argument('-cc', help="charector count show", required=False)
     ar.add_argument('-wc', help="word count show", required=False)
+    ar.add_argument('-t', help="proxy through TOR (SLOW)", action='store_false', required=False)
+    ar.add_argument('-r', help="follow redirects", action='store_false', required=False)
     return ar.parse_args()
 
 def parseHeaders(heads) -> dict:
