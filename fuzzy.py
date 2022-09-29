@@ -17,6 +17,10 @@ def main(args):
         settings.changeSetting('charectorShow', getArguments.parseCharectorCount(args.cc))
     if args.wc != None:
         settings.changeSetting('wordShow', getArguments.parseWordCount(args.wc))
+    if not args.t:
+        settings.changeSetting('tor', True)
+    if not args.r:
+        settings.changeSetting('followRedirects', True)
     
     a = spammer.bombsAway(settings.returnSettings())
     a.bomber()
