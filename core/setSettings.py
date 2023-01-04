@@ -20,8 +20,17 @@ class setup:
             'statusCodes':'',
             'charectorShow':'',
             'wordShow':'',
+            'excludeStatusCode':'',
+            'excludeWordCount':'',
+            'excludeCharectorCount':'',
             'followRedirects':'',
-            'tor':''
+            'delay':'',
+            'timeout':'',
+            'cookies':'',
+            'tor':'',
+            'tumbler':'',
+            'single':'',
+            'threads':''
         }
         return json.dumps(self.defaulprams, indent=3)
 
