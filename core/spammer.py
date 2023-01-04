@@ -12,15 +12,6 @@ class bombsAway(requestHandler):
         self.tumbler = None
         if self.settings['tumbler']:
             self.tumbler = Tumbler(self.settings)
-        
-    def __charCount(self, data) -> int:
-        '''this will return the charector count of an inputed string'''
-        return len(data)
-
-    def __wordCount(self, data) -> int:
-        '''this will return the word count of an inputed string'''
-        return len([word for word in data.split(' ')])
-
 
     def task(self, word):
         time.sleep(float(self.settings['delay']))
