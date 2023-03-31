@@ -11,7 +11,7 @@ at first glance. I will add proxy tumbling for firewall evasion. There will also
 Adding color to the output is a cool part becauser if you want another tool to parse they output it wont be ansied for easy grepping, 
 I made a tool that greps they output of others and most of the outputs had to be unansied.
 
-![alt text](https://github.com/MikeyPPPPPPPP/Fuzzy/blob/main/Screen%20Shot%202022-05-09%20at%204.35.32%20PM.png)
+![alt text](https://github.com/MikeyPPPPPPPP/Fuzzy/blob/main/ran.png)
 
 # Main fetures
 ![alt text](https://github.com/MikeyPPPPPPPP/Fuzzy/blob/main/options.png)
