@@ -14,42 +14,7 @@ I made a tool that greps they output of others and most of the outputs had to be
 ![alt text](https://github.com/MikeyPPPPPPPP/Fuzzy/blob/main/Screen%20Shot%202022-05-09%20at%204.35.32%20PM.png)
 
 # Main fetures
-
-options:
-  -h, --help            show this help message and exit
-
-basic options:
-  -u URL, --url URL     this is the url you want to fuzz, add a FUZZ
-  --headers HEADERS     add headers/change useragent:funman,host:home
-  -P P                  use for a POST request data:1,data:2
-  -w W                  wordlist you want to use
-  -c C                  cookies you want to use data:1,data:2
-  -C                    Colored text
-
-filter options:
-  -sc SC                status code to show 200,403
-  -cc CC                charector count show
-  -wc WC                word count show
-  -rt RT                response time show "<0.31" or ">0.10"
-  -xrt XRT              exclude response time
-  -xsc XSC              exclude status code
-  -xwc XWC              exclude word count
-  -xcc XCC              exclude charector count show
-  -re RE                check the page with a regex
-
-proxy options:
-  -t                    proxy through TOR (SLOW)
-  -S S                  single proxy
-
-tunning options:
-  -ts TS                number of threads, default 2
-  -r R                  follow redirects
-  -tt TT                timeout, default none
-  -d D                  delay to set befor every request, default None
-  -v V                  what HTTP VERB do you want to use, (default GET) GET POST INFO etc
-  -ssl                  set SSL verify (default False) GET POST INFO etc
-  --userAgentTumbler    file of useragent
-
+![alt text](https://github.com/MikeyPPPPPPPP/Fuzzy/blob/main/options.png)
 
 
 ## Filtering
