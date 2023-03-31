@@ -30,16 +30,30 @@ def main(args):
         settings.changeSetting('timeout', args.tt)
     if args.c != None:
         settings.changeSetting('cookies', core.parseHeaders(args.c))
-    if args.T != None:
-        settings.changeSetting('tumbler', core.parseHeaders(args.T))
+    #if args.T != None:
+    #    settings.changeSetting('tumbler', core.parseHeaders(args.T))
     if args.S != None:
         settings.changeSetting('single', core.parseHeaders(args.S))
-    if not args.t:
-        settings.changeSetting('tor', True)
+    if args.t != None:
+        settings.changeSetting('tor', args.t)
     if args.r:
-        settings.changeSetting('followRedirects', True)
+        settings.changeSetting('followRedirects', args.r)
     if args.ts != None:
         settings.changeSetting('threads', args.ts)
+    if args.v != None:
+        settings.changeSetting('verb', args.v)
+    if args.ssl != None:
+        settings.changeSetting('ssl_verify', args.ssl)
+    if args.rt != None:
+        settings.changeSetting('responseTime', core.parseResponseCode(args.rt))
+    if args.xrt != None:
+        settings.changeSetting('excludeResponseTime', core.parseResponseCode(args.xrt))
+    if args.userAgentTumbler != None:
+        settings.changeSetting('user_agent_list_file', args.userAgentTumbler)
+    if args.re != None:
+        settings.changeSetting('regex', args.re)
+    if args.C != None:
+        settings.changeSetting('color', args.C)
     
     a = core.bombsAway(settings.returnSettings())
     a.bomber()
