@@ -4,7 +4,7 @@ also because some fuzzers had options that others didnt
 
 
 
-I wanted to make a tool that was very customizable and useful. A few big parts of this tool are conccurentcy, filtering/filtering range,
+I wanted to make a tool that was very customizable and useful. A few big parts of this tool is conccurentcy, filtering/filtering range,
 User-Agent tumbling. There are also a lot of smaller setting like ssl, timeouts, delays, and tor. I have 
 never seen a tool with User-Agent tumbling and I though if a sysadmin checked the logs it would be a little more random
 at first glance. I will add proxy tumbling for firewall evasion. There will also be a smart extention finder, and waf detector.
