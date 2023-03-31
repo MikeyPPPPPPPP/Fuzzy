@@ -41,6 +41,7 @@ class formatText(object):
         masterString = f"sc {data[0]:<6} wc {self.wordCount(data[1]):<6} cc {self.charCount(data[1]):<6} rt {data[2]:<15}{word.strip():<1}"
 
         show = False
+
         if settings['statusCodes'] != "":
             if self.rangeFinder(str(data[0]), settings['statusCodes']):
                 show = True
@@ -69,7 +70,7 @@ class formatText(object):
             else:
                 if show != True:
                     show = False
-        
+
         if settings['regex'] != "":
             if self.pageContains(settings['regex'], data[1]):
                 show = True
@@ -148,7 +149,6 @@ class formatText(object):
                         return True
                     return False
                 else:
-                    #print(in_data, filter_setting[0].split(">")[1])
                     if int(in_data) > int(filter_setting[0].split(">")[1]):
                         return True
                     return False
@@ -161,6 +161,11 @@ class formatText(object):
                 else:
                     if int(in_data) < int(filter_setting[0].split("<")[1]):
                         return True
+                    return False
+            else:
+                if in_data in filter_setting:
+                    return True
+                else:
                     return False
             
         else:
