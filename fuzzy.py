@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/usr/bin/env python3
 import core
 
 def main(args):
@@ -6,7 +6,7 @@ def main(args):
     settings = core.setup()
 
     settings.changeSetting('url', args.url)
-    settings.changeSetting('wordlist', args.w)
+    settings.changeSetting('wordlist', core.parseWordlists(args.w))
 
     if args.headers != None:
         settings.changeSetting('headers', core.parseHeaders(args.headers))
@@ -30,8 +30,8 @@ def main(args):
         settings.changeSetting('timeout', args.tt)
     if args.c != None:
         settings.changeSetting('cookies', core.parseHeaders(args.c))
-    #if args.T != None:
-    #    settings.changeSetting('tumbler', core.parseHeaders(args.T))
+    if args.proxyTumbler != None:
+        settings.changeSetting('proxy_list_file', args.proxyTumbler)
     if args.S != None:
         settings.changeSetting('single', core.parseHeaders(args.S))
     if args.t != None:
@@ -54,6 +54,11 @@ def main(args):
         settings.changeSetting('regex', args.re)
     if args.C != None:
         settings.changeSetting('color', args.C)
+    if args.e != None:
+        settings.changeSetting('extentions', core.parseExtentions(args.e))
+    if args.j != None:
+        settings.changeSetting('json_otuput', args.j)
+        
     
     a = core.bombsAway(settings.returnSettings())
     a.bomber()
@@ -63,4 +68,3 @@ if __name__ == '__main__':
     args = core.getArgs()
     if args.url:
         main(args)
-        
