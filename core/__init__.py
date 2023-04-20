@@ -1,4 +1,4 @@
-from .getArguments import parseStatusCodes, parseCharectorCount, parseWordCount, parseResponseCode, parseExtentions, parseWordlists, getArgs
+from .getArguments import parseExtentions, parseCommaArgs, getArgs
 from .setSettings import setup
 from .spammer import bombsAway
 from .graphics import banner
