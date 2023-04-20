@@ -59,10 +59,7 @@ def parseHeaders(heads) -> dict:
         ind[str(items[0])]=items[1]
     return ind
 
-parseStatusCodes = lambda codes:[code for code in codes.split(',')]
-parseCharectorCount = lambda codes:[code for code in codes.split(',')]
-parseWordCount =lambda codes:[code for code in codes.split(',')]
-parseResponseCode = lambda codes:[code for code in codes.split(',')]
+
 parseExtentions = lambda codes:["."+code for code in codes.split(',')]
-parseWordlists = lambda codes:[code for code in codes.split(',')]
+parseCommaArgs = lambda codes:[code for code in codes.split(',')]
 
