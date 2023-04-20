@@ -6,34 +6,34 @@ def main(args):
     settings = core.setup()
 
     settings.changeSetting('url', args.url)
-    settings.changeSetting('wordlist', core.parseWordlists(args.w))
+    settings.changeSetting('wordlist', core.parseCommaArgs(args.w))
 
     if args.headers != None:
-        settings.changeSetting('headers', core.parseHeaders(args.headers))
+        settings.changeSetting('headers', core.parseCommaArgs(args.headers))
     if args.P != None:
         settings.changeSetting('postData', args.P)
     if args.sc != None:
-        settings.changeSetting('statusCodes', core.parseStatusCodes(args.sc))
+        settings.changeSetting('statusCodes', core.parseCommaArgs(args.sc))
     if args.cc != None:
-        settings.changeSetting('charectorShow', core.parseCharectorCount(args.cc))
+        settings.changeSetting('charectorShow', core.parseCommaArgs(args.cc))
     if args.wc != None:
-        settings.changeSetting('wordShow', core.parseWordCount(args.wc))
+        settings.changeSetting('wordShow', core.parseCommaArgs(args.wc))
     if args.xsc != None:
-        settings.changeSetting('excludeStatusCode', core.parseStatusCodes(args.xsc))
+        settings.changeSetting('excludeStatusCode', core.parseCommaArgs(args.xsc))
     if args.xcc != None:
-        settings.changeSetting('excludeCharectorCount', core.parseCharectorCount(args.xcc))
+        settings.changeSetting('excludeCharectorCount', core.parseCommaArgs(args.xcc))
     if args.xwc != None:
-        settings.changeSetting('excludeWordCount', core.parseWordCount(args.xwc))
+        settings.changeSetting('excludeWordCount', core.parseCommaArgs(args.xwc))
     if args.d != None:
         settings.changeSetting('delay', args.d)
     if args.tt != None:
         settings.changeSetting('timeout', args.tt)
     if args.c != None:
-        settings.changeSetting('cookies', core.parseHeaders(args.c))
+        settings.changeSetting('cookies', core.parseCommaArgs(args.c))
     if args.proxyTumbler != None:
         settings.changeSetting('proxy_list_file', args.proxyTumbler)
     if args.S != None:
-        settings.changeSetting('single', core.parseHeaders(args.S))
+        settings.changeSetting('single', core.parseCommaArgs(args.S))
     if args.t != None:
         settings.changeSetting('tor', args.t)
     if args.r:
@@ -45,11 +45,11 @@ def main(args):
     if args.ssl != None:
         settings.changeSetting('ssl_verify', args.ssl)
     if args.rt != None:
-        settings.changeSetting('responseTime', core.parseResponseCode(args.rt))
+        settings.changeSetting('responseTime', core.parseCommaArgs(args.rt))
     if args.xrt != None:
-        settings.changeSetting('excludeResponseTime', core.parseResponseCode(args.xrt))
+        settings.changeSetting('excludeResponseTime', core.parseCommaArgs(args.xrt))
     if args.userAgentTumbler != None:
-        settings.changeSetting('user_agent_list_file', args.userAgentTumbler)
+        settings.changeSetting('user_agent_list_file', args.parseCommaArgs)
     if args.re != None:
         settings.changeSetting('regex', args.re)
     if args.C != None:
