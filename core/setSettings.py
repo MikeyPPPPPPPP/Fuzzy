@@ -6,7 +6,6 @@ class setup:
     def __init__(self, filename='fuzzy.json'):
         '''makes and sets up a file with default valuse'''
         self.filename = filename
-        #if os.path.exists(self.filename) == False:
         with open(self.filename,'w') as file:
             file.write(self.makeDefaultFile())
     
