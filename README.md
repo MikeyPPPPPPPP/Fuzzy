@@ -7,7 +7,7 @@ also because some fuzzers had options that others didnt
 I wanted to make a tool that was very customizable and useful. A few big parts of this tool is conccurentcy, filtering/filtering range,
 User-Agent tumbling. There are also a lot of smaller setting like ssl, timeouts, delays, and tor. I have 
 never seen a tool with User-Agent tumbling and I though if a sysadmin checked the logs it would be a little more random
-at first glance. I will add proxy tumbling for firewall evasion. There will also be a smart extention finder, and waf detector.
+at first glance. I also add proxy tumbling for firewall evasion. There will also be a smart extention finder, and waf detector.
 Adding color to the output is a cool part becauser if you want another tool to parse they output it wont be ansied for easy grepping, 
 I made a tool that greps they output of others and most of the outputs had to be unansied.
 
@@ -28,7 +28,6 @@ char count, and the exclueds of those.
 
 ## Tumbling
 
-There is User-Agent tumbling to help with evading bands and trying to make it look like the traffic is comming from multipule computers. I have made a 
-class for proxy tumbling but it needs to be implemented. Not many if any tools have User-Agent tumbling which I though was interesting but I already hade somthing like this in a different tool I made and thought it would be a uniq option for a fuzzer. 
+There is User-Agent tumbling to help with evading bands and trying to make it look like the traffic is comming from multipule computers. Not many if any tools have User-Agent tumbling which I though was interesting but I already hade somthing like this in a different tool I made and thought it would be a uniq option for a fuzzer. 
 
 
