@@ -61,13 +61,8 @@ class bombsAway(requestHandler):
         if self.settings["user_agent_list_file"]:
             self.settings['headers'] = self.userAgentTumbler.change_setting_for_user_agent_tumbler(self.settings['headers'], {"User-Agent":self.userAgentTumbler.get_agent()})
 
-
-
-
         if self.settings["proxy_list_file"]:
             self.settings["proxy"] = self.proxyTumbler.get_proxy()
-
-
 
         time.sleep(float(self.settings['delay']))
         response = self.send(self.settings, word.strip())
