@@ -27,7 +27,6 @@ def getArgs():
     #proxy
     proxy = ar.add_argument_group('proxy options')
     proxy.add_argument('-t', help="proxy through TOR (SLOW)", action='store_true', required=False)
-    #proxy.add_argument('-T', help="proxy tumbler", required=False)
     proxy.add_argument('-S', help="single proxy", required=False)
 
     #fine tunning
