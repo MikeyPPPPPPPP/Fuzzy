@@ -16,6 +16,9 @@ class bombsAway(requestHandler):
 
     task()
         This is where the task for the recurssion is made
+
+    low_mem_test_read()
+        This is a genorator for reading lines in a file
     
     bomber()
         This function is where the recursion happends
@@ -44,6 +47,7 @@ class bombsAway(requestHandler):
 
 
     def task(self, word: str) -> str:
+
         """
         This is the individual task that will be ran.
         where the packet is made/sent/recd/formated
@@ -69,7 +73,16 @@ class bombsAway(requestHandler):
 
         form = formatText()
         formating = form.formatThis(response, word.strip(), self.settings)
-        return formating
+        if formating != None:
+            try:
+                self.json_file.write_to_file(self.json_file.data_to_dict(formating, self.settings['url']))
+            except AttributeError:
+                pass
+            print(formating)
+
+            
+            
+
     
     def interruptMonitor(self, sig, frame):
         print('You pressed Ctrl+C!')
@@ -78,6 +91,11 @@ class bombsAway(requestHandler):
         PID = os.getpid()
         os.kill(PID, signal.SIGTERM)
 
+    def low_mem_test_read(self, filename: str) -> str:
+        '''This will return a genorator object so we dont have to store the entire file in a list, it will make it so there is no delay at the begining of running the program'''
+        for word in filename.readlines():
+            yield word.strip()
+
     def bomber(self):
         '''this will open the wordlist and start sennding packets'''
         signal.signal(signal.SIGINT, self.interruptMonitor)
@@ -85,20 +103,10 @@ class bombsAway(requestHandler):
         for wordlist_in_file in self.settings['wordlist']:
             with open(wordlist_in_file,'r') as wordlist:
                 with concurrent.futures.ThreadPoolExecutor(max_workers=int(self.settings['threads'])) as executor:
-                    
+
+                    imp_wordlist = self.low_mem_test_read(wordlist)
                     if self.settings['extentions']:
-                        wordlist_list = [word.strip() for word in wordlist.readlines()]
-                        futures = [executor.submit(self.task, str(word+extent).strip()) for word in wordlist_list for extent in [" "]+self.settings['extentions']]
+                        futures = [executor.submit(self.task, str(word+extent).strip()) for word in imp_wordlist for extent in [" "]+self.settings['extentions']]
+
                     else:
-                        futures = [executor.submit(self.task, x) for x in wordlist.readlines()]
-
-                    for future in concurrent.futures.as_completed(futures):
-                        result = future.result()
-                        if result != None:
-                            try:
-                                self.json_file.write_to_file(self.json_file.data_to_dict(result, self.settings['url']))
-                            except AttributeError:
-                                pass
-                            print(result)
-
-        
+                        futures = [executor.submit(self.task, x.strip()) for x in imp_wordlist]
