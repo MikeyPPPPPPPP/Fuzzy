@@ -85,21 +85,21 @@ class formatText(object):
                 show = False
             else:
                 if show != True:
-                    show = False
+                    show = True
 
         if settings['excludeWordCount'] != "":
             if self.rangeFinder(str(self.wordCount(data[1])), settings['excludeWordCount']):# == False:
                 show = False
             else:
                 if show != True:
-                    show = False
+                    show = True
 
         if settings['excludeCharectorCount'] != "":
             if self.rangeFinder(str(self.charCount(data[1])), settings['excludeCharectorCount']):
                 show = False
             else:
                 if show != True:
-                    show = False
+                    show = True
 
         if show == True or not any((settings['statusCodes'], settings['wordShow'], settings['charectorShow'], settings['excludeStatusCode'], settings['excludeWordCount'], settings['excludeCharectorCount'], settings['responseTime'], settings['excludeResponseTime'], settings['regex'])):
             if settings['color'] != False:
