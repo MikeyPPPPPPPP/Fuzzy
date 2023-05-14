@@ -67,7 +67,8 @@ class bombsAway(requestHandler):
         time.sleep(float(self.settings['delay']))
         response = self.send(self.settings, word.strip())
 
-        formating = formatText.formatThis(response, word.strip(), self.settings)
+        form = formatText()
+        formating = form.formatThis(response, word.strip(), self.settings)
         return formating
     
     def interruptMonitor(self, sig, frame):
