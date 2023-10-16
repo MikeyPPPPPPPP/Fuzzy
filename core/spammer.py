@@ -79,7 +79,11 @@ class bombsAway(requestHandler):
             except AttributeError:
                 pass
             print(formating)
-
+            
+        #this (might) help with memory
+        del response
+        del form
+        del formating
             
             
 
@@ -110,3 +114,7 @@ class bombsAway(requestHandler):
 
                     else:
                         futures = [executor.submit(self.task, x.strip()) for x in imp_wordlist]
+
+                    #this (might) help with memory
+                    del imp_wordlist
+                    del futures
