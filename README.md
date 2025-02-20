@@ -6,8 +6,14 @@
 
 This tool was build with customizablity in mind and supports many function to handle your needs. Stealth was a big goal so a few features were added to facilitale this. Along with some new functions like User-Agent and Proxy tumbling, this project focused on documentation and readability.
 
+![alt text](https://github.com/MikeyPPPPPPPP/Fuzzy/blob/main/ran.png)
 # Main fetures
-![alt text](https://github.com/MikeyPPPPPPPP/Fuzzy/blob/main/options.png)
+
+1. Concurrentcy 
+3. Multipule wordlists
+4. Colored text toggling
+5. Range Filtering
+6. WAF Evasion
 
 ## Install
 
@@ -27,8 +33,8 @@ python3 fuzzy.py -u <url> -w <wordlis>
 
 Youtube Demo <a href="https://www.youtube.com/watch?v=khkfAbuy5E8&t=580s&ab_channel=MichaelProvenzano">here</a>.
 
+![alt text](https://github.com/MikeyPPPPPPPP/Fuzzy/blob/main/options.png)
 
-![alt text](https://github.com/MikeyPPPPPPPP/Fuzzy/blob/main/ran.png)
 
 ## Contribute 
 
