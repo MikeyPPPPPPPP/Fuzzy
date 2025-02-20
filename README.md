@@ -1,31 +1,61 @@
 # Fuzzy
-This is a directory fuzzing tool I made to help get better at python
-also because some fuzzers had options that others didnt 
+
+## A web fuzzer the solves my problems between (dirb, ffuf, dirbuster) by combining and adding functinality. 
 
 
 
-I wanted to make a tool that was very customizable and useful. A few big parts of this tool is conccurentcy, filtering/filtering range,
-User-Agent tumbling. There are also a lot of smaller setting like ssl, timeouts, delays, and tor. I have 
-never seen a tool with User-Agent tumbling and I though if a sysadmin checked the logs it would be a little more random
-at first glance. I also add proxy tumbling for firewall evasion. Adding color to the output is a cool part becauser if you want another tool to parse they output it wont be ansied for easy grepping, I made a tool that greps they output of others and most of the outputs had to be unansied.
-
-![alt text](https://github.com/MikeyPPPPPPPP/Fuzzy/blob/main/ran.png)
+This tool was build with customizablity in mind and supports many function to handle your needs. Stealth was a big goal so a few features were added to facilitale this. Along with some new functions like User-Agent and Proxy tumbling, this project focused on documentation and readability.
 
 # Main fetures
 ![alt text](https://github.com/MikeyPPPPPPPP/Fuzzy/blob/main/options.png)
 
+## Install
 
-## Filtering
+The easyiest way is to clone the repo and intsall the moduls.
 
-The filtering is pretty cool because besides filtering like 200,404,302  you can also filter with a > or < sign, unfortenently you need to seround the
-argument in quots like this ">200" and you can only do this onec but I am working on makeing it like this ">200,<500" for mor spacific filtering.
-The function that checks the > or < is checked on every filter except fo the regex so you can specify a range on status codes, response time, word count,
-char count, and the exclueds of those.
+```
+git clone https://github.com/MikeyPPPPPPPP/Fuzzy.git
+cd Fuzzy
+pip3 install -r requirments.txt
+```
+## Usage
+
+Basic Usage:
+```
+python3 fuzzy.py -u <url> -w <wordlis>
+```
+
+Youtube Demo <a href="https://www.youtube.com/watch?v=khkfAbuy5E8&t=580s&ab_channel=MichaelProvenzano">here</a>.
 
 
+![alt text](https://github.com/MikeyPPPPPPPP/Fuzzy/blob/main/ran.png)
 
-## Tumbling
+## Contribute 
 
-There is User-Agent tumbling to help with evading bands and trying to make it look like the traffic is comming from multipule computers. Not many if any tools have User-Agent tumbling which I though was interesting but I already hade somthing like this in a different tool I made and thought it would be a uniq option for a fuzzer. 
+If you want to contribute download the repo and work localy. A good place to start is core.spammer.py as its the backbone of the project. Since readability is a big part please include well documented comments and doc string.
 
+## Worflow intigration
+
+Two options made tool chaining are the color and json output option. These options make it easier to parse they output by adding ansi color codes or outputing to a common format. By default their is no color added makingit ideal for worflow intigration.
+```
+-C Colored text
+-j output to a json file
+```
+
+## Known issuse (Work in progress)
+
+This project is ongoing and new feturs are going to be added as I think of them but for now here are a few.
+
+```
+-- add a Crtl + C stop filter updater
+-- make core.setup able to detect previus configs and just update it instead of always makeing a new one
+-- implement recurssion
+        --depth
+        --based on redirects 
+        --403 forbidon
+        --if it is not an endpoint
+```
+## Found a Bug
+
+Please add the command, config file, and a sample of your wordlist or something similare so I can help solve the problem. 
 
