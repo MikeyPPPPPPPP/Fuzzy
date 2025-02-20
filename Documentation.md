@@ -30,4 +30,4 @@ Latest update: https://www.youtube.com/watch?v=khkfAbuy5E8&t=580s&ab_channel=Mic
 
 Update: https://www.youtube.com/watch?v=69aRDVLcD3U&t=39s&ab_channel=MichaelProvenzano
 
-Inital: https://www.youtube.com/watch?v=8ocMMD2CLGQ&t=1172s&ab_channel=MichaelProvenzano
+Initial: https://www.youtube.com/watch?v=8ocMMD2CLGQ&t=1172s&ab_channel=MichaelProvenzano
