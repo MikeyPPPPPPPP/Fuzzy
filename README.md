@@ -4,7 +4,7 @@
 
 
 
-This tool was build with customizablity in mind and supports many function to handle your needs. Stealth was a big goal so a few features were added to facilitale this. Along with some new functions like User-Agent and Proxy tumbling, this project focused on documentation and readability.
+This tool was build with customizablity in mind and supports many function to handle my needs. Stealth was a big goal so a few features were added to facilitale this. Along with some new functions like User-Agent and Proxy tumbling, this project focused on documentation and readability.
 
 ![alt text](https://github.com/MikeyPPPPPPPP/Fuzzy/blob/main/ran.png)
 # Main fetures
@@ -42,7 +42,7 @@ If you want to contribute download the repo and work localy. A good place to sta
 
 ## Worflow intigration
 
-Two options made tool chaining are the color and json output option. These options make it easier to parse they output by adding ansi color codes or outputing to a common format. By default their is no color added makingit ideal for worflow intigration.
+Two options assist tool chaining, the color and json output option. These options make it easier to parse they output by adding ansi color codes or outputing to a common format. By default their is no color added makingit ideal for worflow intigration.
 ```
 -C Colored text
 -j output to a json file
