@@ -36,10 +36,6 @@ Youtube Demo <a href="https://www.youtube.com/watch?v=khkfAbuy5E8&t=580s&ab_chan
 ![alt text](https://github.com/MikeyPPPPPPPP/Fuzzy/blob/main/options.png)
 
 
-## Contribute 
-
-If you want to contribute download the repo and work localy. A good place to start is core.spammer.py as its the backbone of the project. Since readability is a big part please include well documented comments and doc string.
-
 ## Worflow intigration
 
 Two options assist tool chaining, the color and json output option. These options make it easier to parse they output by adding ansi color codes or outputing to a common format. By default their is no color added makingit ideal for worflow intigration.
@@ -61,6 +57,11 @@ This project is ongoing and new feturs are going to be added as I think of them 
         --403 forbidon
         --if it is not an endpoint
 ```
+
+## Contribute 
+
+If you want to contribute download the repo and work localy. A good place to start is core.spammer.py as its the backbone of the project. Since readability is a big part please include well documented comments and doc string.
+
 ## Found a Bug
 
 Please add the command, config file, and a sample of your wordlist or something similare so I can help solve the problem. 
