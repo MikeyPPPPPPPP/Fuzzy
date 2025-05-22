@@ -1,0 +1,1 @@
+If you want to contribute download the repo and work localy. A good place to start is core.spammer.py as its the backbone of the project. Since readability is a big part please include well documented comments and doc string.
