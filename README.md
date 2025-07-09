@@ -68,4 +68,4 @@ Please add the command, config file, and a sample of your wordlist or something 
 
 ## Donate
 
-Donat to your local church because I'm not worth anything.
+Donate to your local church because I'm not worth anything.
