@@ -66,6 +66,6 @@ If you want to contribute download the repo and work localy. A good place to sta
 
 Please add the command, config file, and a sample of your wordlist or something similare so I can help solve the problem. 
 
-## Donate, LMAO
+## Donate
 
 Donat to your local church because I'm not worth anything.
