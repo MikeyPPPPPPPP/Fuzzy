@@ -56,7 +56,7 @@ This project is ongoing and new feturs are going to be added as I think of them 
         --based on redirects 
         --403 forbidon
         --if it is not an endpoint
--- core.setSettings.changeSetting     do JSON -> edit -> File  instead of converting a json to dict back to json, no need to convert it to a dict.
+
 ```
 
 ## Contribute 
