@@ -56,6 +56,7 @@ This project is ongoing and new feturs are going to be added as I think of them 
         --based on redirects 
         --403 forbidon
         --if it is not an endpoint
+-- To avoid signitures detection add the Fisher–Yates shuffleing algorighem to the core.tumbler.userAgent_tumbler.__init__()
 
 ```
 
