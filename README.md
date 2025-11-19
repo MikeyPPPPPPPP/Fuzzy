@@ -36,7 +36,7 @@ Youtube Demo <a href="https://www.youtube.com/watch?v=khkfAbuy5E8&t=580s&ab_chan
 ![alt text](https://github.com/MikeyPPPPPPPP/Fuzzy/blob/main/options.png)
 
 
-## Worflow intigration
+## Workflow intigration
 
 Two options assist tool chaining, the color and json output option. These options make it easier to parse they output by adding ansi color codes or outputing to a common format. By default their is no color added makingit ideal for worflow intigration.
 ```
